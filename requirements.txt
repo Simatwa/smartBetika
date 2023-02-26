@@ -1,0 +1,6 @@
+selenium
+undetected-chromedriver
+requests
+appdirs
+bs4
+cloudscraper
