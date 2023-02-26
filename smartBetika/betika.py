@@ -212,7 +212,7 @@ if not args.predict:
         f"Won't proceed evaluating performance [--predict : {args.predict}]!"
     )
 else:
-    from predict_maker import api_interactor
+    from .predict_maker import api_interactor
 
     api_interactor(args.username, args.paswd, args.host, test=True)
 if args.screenshot:
@@ -278,7 +278,7 @@ def handle_driver():
         ).main()
         if ex_path_name[0]:
             options_passed[ex] = ex_path_name[1]
-            logging.info("Using in-built chromedriver")
+            logging.debug("Using default chromedriver")
         else:
             logging.error("Failed to patch executable chromedriver")
             exit_error(ex_path_name[1])
@@ -290,7 +290,7 @@ try:
 except PermissionError:
     exit_error("PermissionError - Retry with sudo/admin privileges!")
 except Exception as e:
-    logging.error(str(e))
+    logging.exception(e)
 
 
 def update_html():
@@ -439,7 +439,7 @@ class formatter:
             with open(args.output, "a") as file:
                 file.write("\n\n" + str(data))
         except Exception as e:
-            logging.error(str(e))
+            logging.exception(e)
 
 
 # Logins to betika website

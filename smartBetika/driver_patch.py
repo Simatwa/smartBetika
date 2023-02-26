@@ -54,7 +54,7 @@ class DownloadChromedriver:
     def get_download_url(self):
         """Get the download url"""
         self.logging.info(
-            "Getting Chromedriver for browser version - " + self.chrome_version
+            "Getting chromedriver for browser version - " + self.chrome_version
         )
         url = "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_{}".format(
             self.chrome_version[:3]
@@ -126,7 +126,7 @@ class DownloadChromedriver:
         cached_path = os.path.join(self.path, "driver_info.json")
         check_out = self.verify_version(cached_path)
         if check_out[0]:
-            return check_out[1]
+            return check_out
         else:
             self.download_chromedriver()
             self.unzip_contents()
