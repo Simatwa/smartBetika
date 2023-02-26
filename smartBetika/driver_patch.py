@@ -13,6 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 import requests
 import platform
 import os
+import json
 from sys import exit
 
 
@@ -70,9 +71,9 @@ class DownloadChromedriver:
 
     def download_chromedriver(self):
         """Download the chromedriver"""
+        self.logging.info(f"Downloading Chromedriver - v{self.chrome_version}")
         response = requests.get(self.url)
         if response.status_code == 200:
-            logging.info(f"Downloading Chromedriver - v{self.chrome_version}")
             try:
                 with open(os.path.join(self.path, "chromedriver.zip"), "wb") as f:
                     f.write(response.content)
@@ -95,7 +96,7 @@ class DownloadChromedriver:
             self.exit(f"Error occured while unzipping chromedriver - {e}")
 
     def make_driver_executable(self):
-        """Making driver executable by system"""
+        """Makes driver executable by system"""
         from stat import S_IRWXU as add_exc
 
         try:
@@ -108,19 +109,31 @@ class DownloadChromedriver:
             self.exit(f"Error occured while adding exec permission to driver - {e}")
             return (False, str(e))
 
-    def main(self):
-        """Main method"""
-        cached_path = os.path.join(self.path, "driver_name.txt")
+    def verify_version(self, cached_path: str) -> tuple:
+        """Ensures current driver version matches the Browser"""
         if os.path.isfile(cached_path):
             with open(cached_path) as file:
-                return True, file.readlines()[0]
+                contents = json.loads(file.read())
+                try:
+                    return (True, contents[self.chrome_version])
+                except KeyError:
+                    return [False] * 2
+        else:
+            return [False] * 2
+
+    def main(self):
+        """Main method"""
+        cached_path = os.path.join(self.path, "driver_info.json")
+        check_out = self.verify_version(cached_path)
+        if check_out[0]:
+            return check_out[1]
         else:
             self.download_chromedriver()
             self.unzip_contents()
             resp = self.make_driver_executable()
             if resp[0]:
                 with open(cached_path, "w") as file:
-                    file.write(resp[1])
+                    file.write(json.dumps({self.chrome_version: resp[1]}, indent=4))
             return resp
 
 
