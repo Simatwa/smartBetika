@@ -1,5 +1,5 @@
 from setuptools import setup
-from src import __version__, __author__
+from smartBetika import __version__, __author__
 
 
 def get_file(nm: str) -> list:
