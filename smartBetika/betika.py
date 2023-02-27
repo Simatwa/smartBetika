@@ -121,7 +121,7 @@ def get_args():
         "--upcoming", help="Specifies to handle upcoming matches", action="store_true"
     )
     parser.add_argument(
-        "--predict", help="Proceed to predicting on the matches", action="store_true"
+        "--predict", help="Proceed to predict on the matches", action="store_true"
     )
     parser.add_argument(
         "--screenshot",
@@ -311,7 +311,7 @@ def html_style(title: str):
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/><style>
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
-    table{{border-collapse:collapse;}}
+    table{{border-collapse:collapse;text-align:center;width:100%;}}
     .hdr{{list-style-type:decimal;}}
     tbody{{color:green;font-family:tahoma,sans-serif;}}
     h1{{color:darkblue;font-size:150%;text-decoration:underline;}}
