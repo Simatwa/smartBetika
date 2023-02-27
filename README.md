@@ -10,5 +10,5 @@
  <a href="#" alt="Development"><img alt="Progress" src="https://img.shields.io/static/v1?logo=Alpha&label=Development&message=Alpha&color=green"/></a> 
  <!-- <a href="https://pepy.tech/project/smartBetika"><img src="https://static.pepy.tech/personalized-badge/smartbetsapi?period=total&units=international_system&left_color=grey&right_color=orange&left_text=Downloads" alt="Downloads"></a></p><br> -->
 
-> Get Football predictions based on [Betika](https://betika.com) matches.
+> Get Football predictions based on [Betika](https://betika.com) platform.
 
