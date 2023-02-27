@@ -20,7 +20,7 @@ from sys import exit
 class DownloadChromedriver:
     def __init__(self, user_data_dir: str, logging: object):
         self.logging = logging
-        self.exit = lambda msg: logging.error(msg)
+        self.exit = lambda msg: exit(logging.critical(msg))
         if not os.path.isdir(user_data_dir):
             try:
                 os.makedirs(user_data_dir)

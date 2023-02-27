@@ -19,7 +19,7 @@ from time import sleep as wait
 
 fmt4 = datetime.today().strftime("%d_%b_%Y__%H_%M_%S")
 logging.basicConfig(
-    format="%(asctime)s - %(levelname)s : %(message)s",
+    format="%(asctime)s - %(levelname)s : %(message)s [%(module)s:%(lineno)s]",
     datefmt="%H:%M:%S %d-%b-%Y",
     level=logging.INFO,
 )
@@ -44,11 +44,6 @@ def remove_db():
             remove(dbnm)
         except Exception as e:
             logging.error(f"Failed to delete database - {str(e)}")
-    if path.isfile("chromedriver"):
-        try:
-            remove("chromedriver")
-        except Exception as e:
-            logging.error(f"Failed to delete chromedriver - {str(e)}")
 
 
 # Controls other function in try

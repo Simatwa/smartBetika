@@ -150,7 +150,7 @@ def get_args():
     )
     parser.add_argument(
         "--get-API",
-        help="Request the API program for making predictions from earDEVELOPER.",
+        help="Request the API program for making predictions from the DEVELOPER.",
         dest="get_api",
         action="store_true",
     )
@@ -230,6 +230,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import undetected_chromedriver as webdriver
 from time import sleep
+from traceback import format_exc as fe
 
 options = webdriver.ChromeOptions()
 header_added, ht_tables = [], []
@@ -290,6 +291,7 @@ try:
 except PermissionError:
     exit_error("PermissionError - Retry with sudo/admin privileges!")
 except Exception as e:
+    print(fe())
     logging.exception(e)
 
 
@@ -442,8 +444,8 @@ class formatter:
             logging.exception(e)
 
 
-# Logins to betika website
-class betika:
+# Main class betika website
+class smartBetika:
     def __init__(self):
         # login setup
         driver.delete_all_cookies()
@@ -494,7 +496,7 @@ class betika:
             driver.quit()
         except:
             pass
-        from predict_maker import predictor
+        from .predict_maker import predictor
 
         if tables:
             for data in tables:
@@ -516,7 +518,7 @@ def betika():
 
     try:
         db_decide()
-        betika().main()
+        smartBetika().main()
     except Exception as e:
         exit_error(logging.critical(str(e).split("\n")[0]))
         try:

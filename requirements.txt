@@ -3,4 +3,6 @@ undetected-chromedriver
 requests
 appdirs
 bs4
+colorama
 cloudscraper
+tabulate
