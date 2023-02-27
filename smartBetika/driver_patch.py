@@ -45,7 +45,7 @@ class DownloadChromedriver:
                 self.platform = "mac64"
                 command = "defaults read /Applications/Google\ Chrome.app/Contents/Info.plist CFBundleShortVersionString"
             else:
-                exit("Unknown system " + platform)
+                exit("Unsupported system " + platform)
             chrome_version = os.popen(command).read().split()[-1]
             return chrome_version
         except Exception as e:

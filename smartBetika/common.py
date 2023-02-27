@@ -19,7 +19,7 @@ from time import sleep as wait
 
 fmt4 = datetime.today().strftime("%d_%b_%Y__%H_%M_%S")
 logging.basicConfig(
-    format="%(asctime)s - %(levelname)s : %(message)s [%(module)s:%(lineno)s]",
+    format="%(asctime)s - %(levelname)s : %(message)s",
     datefmt="%H:%M:%S %d-%b-%Y",
     level=logging.INFO,
 )
@@ -182,4 +182,4 @@ class database:
 
 
 database = database()
-logging.info("smartBets3 started")
+logging.info("smartBetika started")
