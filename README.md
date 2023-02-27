@@ -47,9 +47,9 @@ $ sudo bash install.sh
 
 ### Usage
 
-This script can only retrieve matches from the mentioned site thus relies on  [smartbetsAPI](Simatwa/smartbetsAPI) to make predictions.
+This script can only retrieve matches from the mentioned site thus relies on  [smartbetsAPI](https://github.com/Simatwa/smartbetsAPI) to make predictions.
 
-Fire up the REST-api as stated in the [documentation](Simatwa/smartbetsAPI).
+Fire up the REST-api as stated in the [documentation](https://github.com/Simatwa/smartbetsAPI).
 
 *For instance:*
 
