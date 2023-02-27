@@ -121,7 +121,7 @@ class category:
         else:
             logging.warning(f"{table} matches NOT available!")
 
-    # Main function
+    # Main method
     def main(self) -> list:
         resp = []  # Contains table_name in database where match-data have been saved
         if self.args.sababisha:
