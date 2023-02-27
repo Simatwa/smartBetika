@@ -15,7 +15,7 @@
 
 Ranging from Upcoming, Sababisha, Midweek-Jackpot and Jackpot matches.
 
-![Intro-diplay](assets/display.gif)
+![Intro-display](assets/display.gif)
 
 ## Prerequisites
 
