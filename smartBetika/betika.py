@@ -148,6 +148,7 @@ def get_args():
     parser.add_argument(
         "--display", help="Run Chrome browser in GUI", action="store_true"
     )
+    parser.add_argument('--view',help='View the matches in Chrome after predicting - Linux',action='store_true')
     parser.add_argument(
         "--get-API",
         help="Request the API program for making predictions from the DEVELOPER.",
@@ -526,13 +527,14 @@ def betika():
         except:
             pass
     finally:
+        from platform import system as platform
+        if all([args.view,platform()=='Linux',args.output]):
+            from os import system
+            logging.info(f'Opening {args.output} in Chrome.')
+            system(f'google-chrome {args.output}')
         db_decide()
         exit_error(False)
 
 
 if __name__ == "__main__":
     betika()
-
-    # 25122219557
-    # 26122210351
-    # 04012315313
