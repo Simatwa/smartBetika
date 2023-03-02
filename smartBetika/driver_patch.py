@@ -98,11 +98,12 @@ class DownloadChromedriver:
     def make_driver_executable(self):
         """Makes driver executable by system"""
         from stat import S_IRWXU as add_exc
-
+        from undetected_chromedriver.patcher import Patcher
         try:
             for file in os.listdir(self.path):
                 if file.lower().startswith("chromedriver") and not file.endswith("zip"):
                     driver_path = os.path.join(self.path, file)
+                    Patcher(executable_path=driver_path).patch_exe()
                     os.chmod(driver_path, add_exc)
                     return (True, driver_path)
         except Exception as e:
