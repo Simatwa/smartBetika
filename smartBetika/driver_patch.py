@@ -125,12 +125,15 @@ class DownloadChromedriver:
         """Main method"""
         cached_path = os.path.join(self.path, "driver_info.json")
         check_out = self.verify_version(cached_path)
+        def handle_driver():
+            self.unzip_contents()
+            return self.make_driver_executable()
         if check_out[0]:
+            handle_driver()
             return check_out
         else:
             self.download_chromedriver()
-            self.unzip_contents()
-            resp = self.make_driver_executable()
+            resp = handle_driver()
             if resp[0]:
                 with open(cached_path, "w") as file:
                     file.write(json.dumps({self.chrome_version: resp[1]}, indent=4))
