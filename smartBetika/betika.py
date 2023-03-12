@@ -148,7 +148,11 @@ def get_args():
     parser.add_argument(
         "--display", help="Run Chrome browser in GUI", action="store_true"
     )
-    parser.add_argument('--view',help='View the matches in Chrome after predicting - Linux',action='store_true')
+    parser.add_argument(
+        "--view",
+        help="View the matches in Chrome after predicting - Linux",
+        action="store_true",
+    )
     parser.add_argument(
         "--get-API",
         help="Request the API program for making predictions from the DEVELOPER.",
@@ -505,7 +509,7 @@ class smartBetika:
                     logging.info(f"Making predictions on {data} match(es)!")
                     predictor(args, data).predictor()
                 tbl = formatter().get_data(data)
-                if tbl and not args.table in ('html'):
+                if tbl and not args.table in ("html"):
                     logging.info(f"Displaying {data} match-info.")
                     print(tbl)
         else:
@@ -528,10 +532,12 @@ def betika():
             pass
     finally:
         from platform import system as platform
-        if all([args.view,platform()=='Linux',args.output]):
+
+        if all([args.view, platform() == "Linux", args.output]):
             from os import system
-            logging.info(f'Opening {args.output} in Chrome.')
-            system(f'google-chrome {args.output}')
+
+            logging.info(f"Opening {args.output} in Chrome.")
+            system(f"google-chrome {args.output}")
         db_decide()
         exit_error(False)
 
