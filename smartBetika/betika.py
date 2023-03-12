@@ -505,7 +505,7 @@ class smartBetika:
                     logging.info(f"Making predictions on {data} match(es)!")
                     predictor(args, data).predictor()
                 tbl = formatter().get_data(data)
-                if tbl:
+                if tbl and not args.table in ('html'):
                     logging.info(f"Displaying {data} match-info.")
                     print(tbl)
         else:

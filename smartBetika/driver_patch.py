@@ -93,9 +93,9 @@ class DownloadChromedriver:
             with ZipFile(os.path.join(self.path, "chromedriver.zip")) as zipped:
                 zipped.extractall(self.path)
         except Exception as e:
-            self.exit(f"Error occured while unzipping chromedriver - {e}")
+            self.exit(f"Error occured while unzipping chromedriver.zip - {e}")
 
-    def make_driver_executable(self):
+    def make_driver_executable(self) -> tuple:
         """Makes driver executable by system"""
         from stat import S_IRWXU as add_exc
 
