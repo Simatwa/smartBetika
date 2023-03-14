@@ -17,6 +17,7 @@ from .common import *
 import cloudscraper
 import json
 from sys import exit, platform
+from os import path
 
 
 class api_interactor:
@@ -31,7 +32,7 @@ class api_interactor:
                 "desktop": True,
             },
         )
-        auth = self.post({"user": user, "paswd": paswd}, url + "/login")
+        auth = self.post({"user": user, "paswd": paswd}, path.join(url, "login"))
         if auth[0] and auth[1].get("status_code") == 200:
             if not test:
                 logging.info("Login successfull @smartbets_API")
@@ -49,7 +50,7 @@ class api_interactor:
     # sends get request to the api
     def get(self, url=False, param=False):
         if not url:
-            url = self.url
+            url = path.join(self.url, "predict")
         try:
             if param:
                 resp = self.req.get(url=url, params=param)
@@ -69,7 +70,7 @@ class api_interactor:
     # Sends post request to the api
     def post(self, param, url=False):
         if not url:
-            url = self.url
+            url = path.join(self.url, "predict")
         try:
             resp = self.req.post(url=url, data=param)
             return (
