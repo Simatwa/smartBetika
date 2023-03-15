@@ -70,6 +70,10 @@ $ betika --normal --sababisha --predict --screenshot -dir Screenshots -tbl html
 
 ![html_display](assets/html_diplay.png)
 
+Here are some of html-formated predictions:
+  * [Default mode](https://github.com/Simatwa/smartBetika/raw/main/assets/all_15th_3.html)
+  * [Verbose mode](https://github.com/Simatwa/smartBetika/raw/main/assets/Mar-1-2.html)
+
 Fot further info run `betika -h`:
 
 ```
