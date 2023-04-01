@@ -313,6 +313,7 @@ def html_style(title: str):
         return f'<h4 class="hdr">{total}.{title}</h4><marquee id="time">Dated : {date()}</marquee>'
     header_added.append(True)
     rp = f"""<title>SmartBetika predictions</title>
+    <link rel="icon" type="image/x-icon" href="https://simatwa.github.com/smartBetika/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/><style>
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
