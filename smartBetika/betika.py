@@ -327,8 +327,7 @@ def html_style(title: str):
     #time{{font-size:x-small;}}
     #time,h1,h4{{text-align:center;}}
     td{{border-left:1px solid rgb(42, 82, 65);border-right:1px solid green;}}
-    tr{{border:none;}}
-    </style>
+    tr{{border:none;}}</style>
     <h1>SmartBetika Predictions.</h1>
     <a href="#"><img style="display:none" src="https://visitor-badge.glitch.me/badge?page_id=Simatwa.smartBetika&left_color=red&right_color=lime&left_text=Punters" alt="Punters"/></a>
     <h4 class="hdr">{total}.{title}</h4>
