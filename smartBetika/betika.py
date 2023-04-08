@@ -314,7 +314,8 @@ def html_style(title: str):
     header_added.append(True)
     rp = f"""<title>SmartBetika predictions</title>
     <link rel="icon" type="image/x-icon" href="https://simatwa.github.io/smartBetika/favicon.ico"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/><style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:title" content="Betika based predictions"/><style>
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
     table{{border-collapse:collapse;text-align:center;width:100%;}}
