@@ -15,7 +15,7 @@ from . import __version__, __author__
 
 program_info = "Football-Punter's favorite girlfriend - based on Betika platform!"
 license_info = "[*] This program is disseminated under MIT-FPA license."
-
+github_adlink = "https://github.com/Simatwa/smartBetika/raw/main/page-ad.txt"
 
 def get_args():
     import argparse
@@ -239,6 +239,7 @@ from traceback import format_exc as fe
 
 options = webdriver.ChromeOptions()
 header_added, ht_tables = [], []
+ad_handler = None
 
 
 # Updates the html including the js fetched ones
@@ -327,6 +328,8 @@ def html_style(title: str):
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918"
      crossorigin="anonymous"></script>
     <style>
+    .banner > a > img{{max-width:100%;border-radius:25px;}}
+    table{{margin-bottom:10px;}} body{{text-align:center;}}
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
     table{{border-collapse:collapse;text-align:center;width:100%;}}
@@ -350,6 +353,22 @@ def html_style(title: str):
 class formatter:
     def __init__(self):
         self.verbose = args.verbose
+        self.ad_tag = self.get_ads()
+    
+    def get_ads(self):
+        try:
+            if ad_handler:
+                return ad_handler
+            from requests import get
+            resp = get(github_adlink,timeout=20)
+            if resp.ok:
+                resp=resp.text
+                ad_handler=resp
+            else:
+                resp =''
+            return resp
+        except Exception:
+            return ''
 
     def get_data(self, tbl: str) -> list:
         from tabulate import tabulate
@@ -455,7 +474,7 @@ class formatter:
             if args.table == "html":
                 from re import sub
 
-                data = sub("\n", "", data)
+                data = sub("\n", "", data)+self.ad_tag
             with open(args.output, "a") as file:
                 file.write("\n\n" + str(data))
         except Exception as e:
@@ -544,6 +563,16 @@ def betika():
         except:
             pass
     finally:
+        if args.table=='html':
+            formatter().save_data(
+        """
+        <div class="banner">
+	<a href="https://oxygenblobsglass.com/bjih3uuhe?key=6b37fa529bff17e039a5697d32ef52f8">
+    <img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/png/468%20x%20120%20px.png"/>
+    </a>
+</div>
+        """
+            )
         from platform import system as platform
 
         if all([args.view, platform() == "Linux", args.output]):
