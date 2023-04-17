@@ -323,6 +323,7 @@ def html_style(title: str):
     <link rel="canonical" href="https://simatwa.github.io/smartBetika">
     <link rel="icon" type="image/x-icon" href="https://simatwa.github.io/smartBetika/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type='text/javascript' src='//pl19107853.highrevenuegate.com/57/39/93/573993d8da28965f062ceca89805d006.js'></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918"
      crossorigin="anonymous"></script>
     <style>
