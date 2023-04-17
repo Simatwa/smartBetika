@@ -328,7 +328,7 @@ def html_style(title: str):
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918"
      crossorigin="anonymous"></script>
     <style>
-    .banner > a > img{{max-width:100%;border-radius:25px;}}
+    .banner > a > img{{max-width:100%;max-height:200px;border-radius:25px;}}
     table{{margin-bottom:10px;}} body{{text-align:center;}}
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
