@@ -323,6 +323,8 @@ def html_style(title: str):
     <link rel="canonical" href="https://simatwa.github.io/smartBetika">
     <link rel="icon" type="image/x-icon" href="https://simatwa.github.io/smartBetika/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918"
+     crossorigin="anonymous"></script>
     <style>
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
@@ -337,7 +339,6 @@ def html_style(title: str):
     td{{border-left:1px solid rgb(42, 82, 65);border-right:1px solid green;}}
     tr{{border:none;}}</style></head>
     <h1>SmartBetika Predictions.</h1>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918" crossorigin="anonymous"></script>
     <a href="#"><img style="display:none" src="https://visitor-badge.glitch.me/badge?page_id=Simatwa.smartBetika&left_color=red&right_color=lime&left_text=Punters" alt="Punters"/></a>
     <h4 class="hdr">{total}.{title}</h4>
     <marquee id="time">Dated : {date()}</marquee>"""
