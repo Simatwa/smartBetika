@@ -1,0 +1,71 @@
+
+
+>>> (17-Apr 14:04:13) : This html code, provides betting predictions information based on betting platform called Betika, generate SEO codes for it: 
+
+
+<title>SmartBetika predictions</title>    <link rel="icon" type="image/x-icon" href="https://simatwa.github.io/smartBetika/favicon.ico"/>    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    <meta property="og:title" content="Betika based predictions"/><style>    tr:nth-child(odd){background-color:darkgray;color:black;}    tr:nth-child(even){background-color:gray;color:black;}    table{border-collapse:collapse;text-align:center;width:100%;}    .hdr{list-style-type:decimal;}    tbody{color:green;font-family:tahoma,sans-serif;}    h1{color:darkblue;font-size:150%;text-decoration:underline;}    th{background-color:darkgreen;;color:lime;}    h4{text-decoration:underline;color:blue;font-weight:bold;font-family:Verdana,sans-serif;}    #time{font-size:x-small;}    #time,h1,h4{text-align:center;}    td{border-left:1px solid rgb(42, 82, 65);border-right:1px solid green;}    tr{border:none;}</style>    <h1>SmartBetika Predictions.</h1>    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918" crossorigin="anonymous"></script>    <a href="#"><img style="display:none" src="https://visitor-badge.glitch.me/badge?page_id=Simatwa.smartBetika&left_color=red&right_color=lime&left_text=Punters" alt="Punters"/></a>    <h4 class="hdr">1.Upcoming</h4>    <marquee id="time">Dated : 15-Apr-2023 14:15:29</marquee><table><thead><tr><th style="text-align: right;">  Id</th><th>Home                </th><th>Away           </th><th>Pick  </th><th>Choice  </th><th style="text-align: right;">  Prob</th></tr></thead><tbody><tr><td style="text-align: right;">   3</td><td>Man City            </td><td>Leicester      </td><td>1     </td><td>1       </td><td style="text-align: right;"> 71.43</td></tr><tr><td style="text-align: right;">  16</td><td>Genoa               </td><td>Perugia        </td><td>1     </td><td>1       </td><td style="text-align: right;"> 71.43</td></tr><tr><td style="text-align: right;">   1</td><td>Chelsea             </td><td>Brighton       </td><td>2     </td><td>2       </td><td style="text-align: right;"> 66.67</td></tr><tr><td style="text-align: right;">  13</td><td>Sheff Utd           </td><td>Cardiff        </td><td>1     </td><td>1       </td><td style="text-align: right;"> 66.67</td></tr><tr><td style="text-align: right;">  14</td><td>Hangzhou Greentow...</td><td>Changchun Yatai</td><td>1     </td><td>1       </td><td style="text-align: right;"> 66.67</td></tr><tr><td style="text-align: right;">   2</td><td>Tottenham           </td><td>Bournemouth    </td><td>1     </td><td>1       </td><td style="text-align: right;"> 62.5 </td></tr><tr><td style="text-align: right;">  20</td><td>Churchill Brother...</td><td>Chennaiyin Fc  </td><td>gg    </td><td>2       </td><td style="text-align: right;"> 62.5 </td></tr><tr><td style="text-align: right;">   7</td><td>Bayern              </td><td>Hoffenheim     </td><td>gg    </td><td>2       </td><td style="text-align: right;"> 60   </td></tr><tr><td style="text-align: right;">  12</td><td>Leipzig             </td><td>Augsburg       </td><td>2     </td><td>2       </td><td style="text-align: right;"> 60   </td></tr><tr><td style="text-align: right;">  15</td><td>Beijing Guoan       </td><td>Meizhou        </td><td>1     </td><td>1       </td><td style="text-align: right;"> 60   </td></tr><tr><td style="text-align: right;">  18</td><td>Young Lions         </td><td>Home United    </td><td>ov15  </td><td>2       </td><td style="text-align: right;"> 60   </td></tr><tr><td style="text-align: right;">   4</td><td>Cadiz               </td><td>Real Madrid    </td><td>ov15  </td><td>1       </td><td style="text-align: right;"> 57.14</td></tr><tr><td style="text-align: right;">   6</td><td>Inter               </td><td>Monza          </td><td>gg    </td><td>2       </td><td style="text-align: right;"> 57.14</td></tr><tr><td style="text-align: right;">   9</td><td>Villarreal          </td><td>Valladolid     </td><td>ov15  </td><td>1       </td><td style="text-align: right;"> 57.14</td></tr><tr><td style="text-align: right;">   5</td><td>Napoli              </td><td>Hellas Verona  </td><td>1     </td><td>1       </td><td style="text-align: right;"> 55.56</td></tr><tr><td style="text-align: right;">  17</td><td>Albirex Niigata     </td><td>Brunei         </td><td>ov15  </td><td>X2      </td><td style="text-align: right;"> 51.6 </td></tr><tr><td style="text-align: right;">  10</td><td>Bologna             </td><td>Milan          </td><td>X2    </td><td>X2      </td><td style="text-align: right;"> 51.32</td></tr><tr><td style="text-align: right;">  11</td><td>Stuttgart           </td><td>Dortmund       </td><td>ov15  </td><td>X2      </td><td style="text-align: right;"> 51.23</td></tr><tr><td style="text-align: right;">   8</td><td>Aston Villa         </td><td>Newcastle      </td><td>ov15  </td><td>X2      </td><td style="text-align: right;"> 51.17</td></tr><tr><td style="text-align: right;">  19</td><td>Paide               </td><td>Kalev          </td><td>X     </td><td>X       </td><td style="text-align: right;"> 50   </td></tr></tbody></table>
+
+<h4 class="hdr">2.MIDJP</h4><marquee id="time">Dated : 15-Apr-2023 14:19:16</marquee><table><thead><tr><th style="text-align: right;">  Id</th><th>Home       </th><th>Away          </th><th>Pick  </th><th>Choice  </th><th style="text-align: right;">  Prob</th></tr></thead><tbody><tr><td style="text-align: right;">   4</td><td>Koln       </td><td>Mainz         </td><td>2     </td><td>2       </td><td style="text-align: right;"> 71.43</td></tr><tr><td style="text-align: right;">   5</td><td>Chelsea    </td><td>Brighton      </td><td>2     </td><td>2       </td><td style="text-align: right;"> 66.67</td></tr><tr><td style="text-align: right;">  10</td><td>Rennes     </td><td>Reims         </td><td>2     </td><td>2       </td><td style="text-align: right;"> 66.67</td></tr><tr><td style="text-align: right;">  13</td><td>Bremen     </td><td>Freiburg      </td><td>gg    </td><td>2       </td><td style="text-align: right;"> 60   </td></tr><tr><td style="text-align: right;">  15</td><td>Valencia   </td><td>Sevilla       </td><td>2     </td><td>2       </td><td style="text-align: right;"> 60   </td></tr><tr><td style="text-align: right;">   6</td><td>Southampton</td><td>Crystal Palace</td><td>2     </td><td>2       </td><td style="text-align: right;"> 58.12</td></tr><tr><td style="text-align: right;">  14</td><td>Wolfsburg  </td><td>Leverkusen    </td><td>ov15  </td><td>2       </td><td style="text-align: right;"> 55.56</td></tr><tr><td style="text-align: right;">  12</td><td>Auxerre    </td><td>Nantes        </td><td>gg    </td><td>X2      </td><td style="text-align: right;"> 54.63</td></tr><tr><td style="text-align: right;">   3</td><td>Bologna    </td><td>Milan         </td><td>X2    </td><td>X2      </td><td style="text-align: right;"> 51.32</td></tr><tr><td style="text-align: right;">   1</td><td>Aston Villa</td><td>Newcastle     </td><td>ov15  </td><td>X2      </td><td style="text-align: right;"> 51.17</td></tr><tr><td style="text-align: right;">   7</td><td>Wolves     </td><td>Brentford     </td><td>gg    </td><td>X2      </td><td style="text-align: right;"> 51.09</td></tr><tr><td style="text-align: right;">   9</td><td>Bilbao     </td><td>Real Sociedad </td><td>ov15  </td><td>X2      </td><td style="text-align: right;"> 50.55</td></tr><tr><td style="text-align: right;">   2</td><td>Hibernian  </td><td>Hearts        </td><td>1     </td><td>1       </td><td style="text-align: right;">100   </td></tr><tr><td style="text-align: right;">   8</td><td>Everton    </td><td>Fulham        </td><td>1     </td><td>1       </td><td style="text-align: right;">100   </td></tr><tr><td style="text-align: right;">  11</td><td>Lecce      </td><td>Sampdoria     </td><td>2     </td><td>2       </td><td style="text-align: right;">100   </td></tr></tbody></table>
+
+
+Here are some possible SEO codes for the provided HTML code:- Title tag: <title>SmartBetika predictions - Betika based betting tips</title>
+- Meta description: <meta name="description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+- Open Graph title: <meta property="og:title" content="SmartBetika predictions - Betika based betting tips">
+- Open Graph description: <meta property="og:description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+- Twitter card title: <meta name="twitter:title" content="SmartBetika predictions - Betika based betting tips">
+- Twitter card description: <meta name="twitter:description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+- Canonical URL: <link rel="canonical" href="https://simatwa.github.io/smartBetika/predictions.html"> (assuming the HTML code is in a file named "predictions.html" and hosted on the "simatwa.github.io/smartBetika" domain)
+
+>>> (17-Apr 14:05:28) : now wrap that into a html based code
+
+Here's an example of how the provided HTML code could be wrapped into a complete HTML document with the suggested SEO codes:```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SmartBetika predictions - Betika based betting tips</title>
+    <meta name="description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+    <meta property="og:title" content="SmartBetika predictions - Betika based betting tips">
+    <meta property="og:description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+    <meta name="twitter:title" content="SmartBetika predictions - Betika based betting tips">
+    <meta name="twitter:description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+    <link rel="canonical" href="https://simatwa.github.io/smartBetika/predictions.html">
+    <link rel="icon" type="image/x-icon" href="https://simatwa.github.io/smartBetika/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        tr:nth-child(odd){background-color:darkgray;color:black;}
+        tr:nth-child(even){background-color:gray;color:black;}
+        table{border-collapse:collapse;text-align:center;width:100%;}
+        .hdr{list-style-type:decimal;}
+        tbody{color:green;font-family:tahoma,sans-serif;}
+        h1{color:darkblue;font-size:150%;text-decoration:underline;}
+        th{background-color:darkgreen;;color:lime;}
+        h4{text-decoration:underline;color:blue;font-weight:bold;font-family:Verdana,sans-serif;}
+        #time{font-size:x-small;}
+        #time,h1,h4{text-align:center;}
+        td{border-left:1px solid rgb(42, 82, 65);border-right:1px solid green;}
+        tr{border:none;}
+    </style>
+</head>
+<body>
+    <h1>SmartBetika Predictions.</h1>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918" crossorigin="anonymous"></script>
+    <a href="#"><img style="display:none" src="https://visitor-badge.glitch.me/badge?page_id=Simatwa.smartBetika&left_color=red&right_color=lime&left_text=Punters" alt="Punters"/></a>
+    <h4 class="hdr">1.Upcoming</h4>
+    <marquee id="time">Dated : 15-Apr-2023 14:15:29</marquee>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: right;">Id</th>
+                <th>Home</th>
+                <th>Away</th>
+                <th>Pick</th>
+                <th>Choice</th>
+                <th style="text-align: right;">Prob</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: right;">3</td>
+                <td>Man City</td>
+                <td>Leicester</td>
+               

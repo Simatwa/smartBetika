@@ -312,10 +312,18 @@ def html_style(title: str):
     if header_added:
         return f'<h4 class="hdr">{total}.{title}</h4><marquee id="time">Dated : {date()}</marquee>'
     header_added.append(True)
-    rp = f"""<title>SmartBetika predictions</title>
+    rp = f"""
+    <head>
+    <title>SmartBetika predictions - Betika based betting tips</title>
+    <meta name="description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and jackpot games. Check our expert picks and increase your chances of winning.">
+    <meta property="og:title" content="SmartBetika predictions - Betika based betting tips">
+    <meta property="og:description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+    <meta name="twitter:title" content="SmartBetika predictions - Betika based betting tips">
+    <meta name="twitter:description" content="Get accurate and reliable betting predictions for Betika platform. Our SmartBetika tips cover upcoming matches and midweek jackpot games. Check our expert picks and increase your chances of winning.">
+    <link rel="canonical" href="https://simatwa.github.io/smartBetika">
     <link rel="icon" type="image/x-icon" href="https://simatwa.github.io/smartBetika/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:title" content="Betika based predictions"/><style>
+    </head>
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
     table{{border-collapse:collapse;text-align:center;width:100%;}}
