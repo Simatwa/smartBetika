@@ -17,6 +17,7 @@ program_info = "Football-Punter's favorite girlfriend - based on Betika platform
 license_info = "[*] This program is disseminated under MIT-FPA license."
 github_adlink = "https://github.com/Simatwa/smartBetika/raw/main/page-ad.txt"
 
+
 def get_args():
     import argparse
 
@@ -228,7 +229,7 @@ if args.screenshot:
             mkdir(args.path)
     except PermissionError:
         args.screenshot = False
-        logging.warning("Screenshots wont be saved! PermissionError")
+        logging.warning("Screenshots won't be saved! PermissionError")
     except:
         pass
 from selenium.webdriver.common.by import By
@@ -239,7 +240,6 @@ from traceback import format_exc as fe
 
 options = webdriver.ChromeOptions()
 header_added, ht_tables = [], []
-ad_handler = None
 
 
 # Updates the html including the js fetched ones
@@ -297,7 +297,6 @@ try:
 except PermissionError:
     exit_error("PermissionError - Retry with sudo/admin privileges!")
 except Exception as e:
-    print(fe())
     logging.exception(e)
 
 
@@ -326,9 +325,8 @@ def html_style(title: str):
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script type='text/javascript' src='//pl19107853.highrevenuegate.com/57/39/93/573993d8da28965f062ceca89805d006.js'></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9839772411808918"
-     crossorigin="anonymous"></script>
-    <style>
-    .banner > a > img{{max-width:100%;max-height:200px;border-radius:25px;}}
+     crossorigin="anonymous"></script><style>
+    .banner > a > img{{width:100%;max-height:200px;border-radius:25px;}}
     table{{margin-bottom:10px;}} body{{text-align:center;}}
     tr:nth-child(odd){{background-color:darkgray;color:black;}}
     tr:nth-child(even){{background-color:gray;color:black;}}
@@ -354,21 +352,20 @@ class formatter:
     def __init__(self):
         self.verbose = args.verbose
         self.ad_tag = self.get_ads()
-    
+
     def get_ads(self):
         try:
-            if ad_handler:
-                return ad_handler
             from requests import get
-            resp = get(github_adlink,timeout=20)
+
+            resp = get(github_adlink, timeout=20)
             if resp.ok:
-                resp=resp.text
-                ad_handler=resp
+                resp = resp.text
+                ad_handler = resp
             else:
-                resp =''
+                resp = ""
             return resp
-        except Exception:
-            return ''
+        except Exception as e:
+            return ""
 
     def get_data(self, tbl: str) -> list:
         from tabulate import tabulate
@@ -467,18 +464,21 @@ class formatter:
                 logging.warning(f"Zero filename to save {tbl} predictions!")
             return respo
         else:
-            return None
+            return
 
-    def save_data(self, data: str):
+    def save_data(self, data: str, no_ad: bool = False):
         try:
             if args.table == "html":
                 from re import sub
 
-                data = sub("\n", "", data)+self.ad_tag
+                data = sub("\n", "", data) + "" if no_ad else self.ad_tag
             with open(args.output, "a") as file:
                 file.write("\n\n" + str(data))
         except Exception as e:
             logging.exception(e)
+
+
+formatt = formatter()
 
 
 # Main class betika website
@@ -540,7 +540,7 @@ class smartBetika:
                 if args.predict:
                     logging.info(f"Making predictions on {data} match(es)!")
                     predictor(args, data).predictor()
-                tbl = formatter().get_data(data)
+                tbl = formatt.get_data(data)
                 if tbl and not args.table in ("html"):
                     logging.info(f"Displaying {data} match-info.")
                     print(tbl)
@@ -563,15 +563,16 @@ def betika():
         except:
             pass
     finally:
-        if args.table=='html':
-            formatter().save_data(
-        """
+        if args.table == "html":
+            formatt.save_data(
+                """
         <div class="banner">
 	<a href="https://oxygenblobsglass.com/bjih3uuhe?key=6b37fa529bff17e039a5697d32ef52f8">
     <img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/png/468%20x%20120%20px.png"/>
     </a>
 </div>
-        """
+        """,
+                True,
             )
         from platform import system as platform
 
