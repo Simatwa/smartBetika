@@ -18,6 +18,24 @@ license_info = "[*] This program is disseminated under MIT-FPA license."
 github_adlink = "https://github.com/Simatwa/smartBetika/raw/main/page-ad.txt"
 
 
+def error_handler(quit=True):
+    def wrapper(func):
+        def main(*args, **kwargs):
+            try:
+                return func(*args, **kwargs)
+            except Exception as e:
+                err = e.args[1] if len(e.args) > 1 else str(e)
+                if quit:
+                    exit(logging.critical(err))
+                else:
+                    logging.error(err)
+
+        return main
+
+    return wrapper
+
+
+@error_handler()
 def get_args():
     import argparse
 
@@ -262,6 +280,7 @@ options_passed = {"options": options}
 
 
 # Handles chromedriver configurations
+@error_handler()
 def handle_driver():
     inf, ex = args.driver, "driver_executable_path"
     if inf:
@@ -291,13 +310,13 @@ def handle_driver():
             exit_error(ex_path_name[1])
 
 
-handle_driver()
 try:
+    handle_driver()
     driver = webdriver.Chrome(**options_passed)
 except PermissionError:
     exit_error("PermissionError - Retry with sudo/admin privileges!")
 except Exception as e:
-    logging.exception(e)
+    exit(logging.critical(e.args[1] if len(e.args) > 1 else str(e)))
 
 
 def update_html():
@@ -548,6 +567,7 @@ class smartBetika:
             logging.info("Done hunting down matches!")
 
 
+@error_handler()
 def betika():
     def db_decide():
         if not args.noclear:
