@@ -466,12 +466,12 @@ class formatter:
         else:
             return
 
-    def save_data(self, data: str, no_ad: bool = False):
+    def save_data(self, data: str, ads: bool = True):
         try:
             if args.table == "html":
                 from re import sub
 
-                data = sub("\n", "", data) + "" if no_ad else self.ad_tag
+                data = sub("\n", "", data) + f" {self.ad_tag if ads else '' }"
             with open(args.output, "a") as file:
                 file.write("\n\n" + str(data))
         except Exception as e:
@@ -572,7 +572,7 @@ def betika():
     </a>
 </div>
         """,
-                True,
+                False,
             )
         from platform import system as platform
 
