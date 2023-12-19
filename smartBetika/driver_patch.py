@@ -29,7 +29,6 @@ class DownloadChromedriver:
                 self.exit(f"Error while creating data dir : {e}")
         self.platform = platform.system()
         self.chrome_version = self.get_chrome_version()
-        self.url = self.get_download_url()
         self.path = user_data_dir
 
     def get_chrome_version(self):
@@ -67,12 +66,42 @@ class DownloadChromedriver:
             )
             return download_url
         else:
-            self.exit(f"Chromedriver not found for - {self.chrome_version}")
+            second_trial_url = self.hunt_chromedriver_url_from_json(
+                self.chrome_version, self.platform
+            )
+            if not second_trial_url:
+                self.exit(f"Chromedriver not found for - {self.chrome_version}")
+            return second_trial_url
+
+    def hunt_chromedriver_url_from_json(
+        self, target_version: str, platform: str
+    ) -> str:
+        """Hunts chromedriver urls based on target Chrome version
+        Args:
+            target_version (str): Chrome version
+            platforn (str): Operating system
+
+        Returns:
+             str: url pointing to chromedriver
+        """
+        all_versions = requests.get(
+            "https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json"
+        ).json()
+
+        versions = all_versions["versions"]
+
+        for version in versions:
+            if version["version"] == target_version:
+                links = version["downloads"]["chromedriver"]
+                for link in links:
+                    if link["platform"] == platform:
+                        return link["url"]
 
     def download_chromedriver(self):
         """Download the chromedriver"""
+        chromedriver_url = self.get_download_url()
         self.logging.info(f"Downloading Chromedriver - v{self.chrome_version}")
-        response = requests.get(self.url)
+        response = requests.get(chromedriver_url)
         if response.status_code == 200:
             try:
                 with open(os.path.join(self.path, "chromedriver.zip"), "wb") as f:
@@ -92,6 +121,22 @@ class DownloadChromedriver:
 
             with ZipFile(os.path.join(self.path, "chromedriver.zip")) as zipped:
                 zipped.extractall(self.path)
+            possible_dir = os.path.join(self.path, "chromedriver-" + self.platform)
+            if os.path.isdir(possible_dir):
+                import shutil
+
+                shutil.copytree(
+                    possible_dir, self.path, symlinks=True, dirs_exist_ok=True
+                )
+                """
+                for entry in os.listdir(possible_dir):
+                    source_path = os.path.join(possible_dir,entry)
+                    destination_path = os.path.join(self.path,entry)
+                    if os.path.isfile(destination_path):
+                        os.remove(destination_path)
+                    shutil.copy(source_path, destination_path)
+                    """
+
         except Exception as e:
             self.exit(f"Error occured while unzipping chromedriver.zip - {e}")
 
@@ -101,7 +146,11 @@ class DownloadChromedriver:
 
         try:
             for file in os.listdir(self.path):
-                if file.lower().startswith("chromedriver") and not file.endswith("zip"):
+                if (
+                    os.path.isfile(file)
+                    and file.lower().startswith("chromedriver")
+                    and not file.endswith("zip")
+                ):
                     driver_path = os.path.join(self.path, file)
                     os.chmod(driver_path, add_exc)
                     return (True, driver_path)
@@ -144,6 +193,12 @@ class DownloadChromedriver:
 
 if __name__ == "__main__":
     import logging
+
+    logging.basicConfig(
+        format="%(asctime)s - %(levelname)s : %(message)s",
+        datefmt="%H:%M:%S %d-%b-%Y",
+        level=logging.INFO,
+    )
 
     start = DownloadChromedriver(os.getcwd(), logging)
     print(start.main())
