@@ -489,7 +489,7 @@ class formatter:
                 from re import sub
 
                 data = sub("\n", "", data) + f" {self.ad_tag if ads else '' }"
-            with open(args.output, "a") as file:
+            with open(args.output or 'predictions.txt', "a") as file:
                 file.write("\n\n" + str(data))
         except Exception as e:
             logging.exception(e)
